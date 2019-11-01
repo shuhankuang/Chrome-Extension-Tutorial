@@ -1,0 +1,22 @@
+/* style.css */
+
+/* popup 窗口的大小 */
+.popup-box {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 0px;
+}
+
+/* options 窗口的大小 */
+.options-box {
+  height: 200px;
+  padding: 20px;
+  background:#f1f3f4;
+}
+
+/* 百度首页的按钮 id，将其颜色改变 */
+#su {
+  background:#de0f17;
+  border-bottom:#de0f17;
+}

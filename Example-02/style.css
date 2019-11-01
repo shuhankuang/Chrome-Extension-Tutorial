@@ -1,0 +1,16 @@
+/* style.css */
+
+/* popup 窗口的大小 */
+.popup-box {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 0px;
+}
+
+/* options 窗口的大小 */
+.options-box {
+  /* height: 200px; */
+  padding: 20px;
+  background:#f1f3f4;
+}

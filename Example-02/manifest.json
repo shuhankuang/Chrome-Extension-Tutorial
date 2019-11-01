@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "微博私信助手",
+  "version": "1.0.0",
+  "description": "一款简单的私信工具。",
+  "icons": {
+    "16": "images/icon02-16.png",
+    "32": "images/icon02-32.png",
+    "48": "images/icon02-48.png",
+    "128": "images/icon02-128.png"
+  },
+  "browser_action": {
+		"default_icon": "images/icon02-48.png",
+		"default_title": "微博私信助手",
+		"default_popup": "popup.html"
+  },
+  "options_ui": {"page": "options.html", "chrome_style": false},
+  "content_scripts": [
+		{
+			"matches": ["*://api.weibo.com/*"],
+			"js": [
+				"libs/jquery-3.4.1.min.js",
+				"global.js",
+				"utils.js",
+				"content.js"
+			],
+			"css": ["style.css"],
+			"run_at": "document_end"
+		}
+  ],
+  "background": {
+    "scripts": [
+      "libs/jquery-3.4.1.min.js",
+      "global.js",
+      "utils.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "libs/*",
+    "images/*"
+  ],
+	"permissions": [
+    "*://*.weibo.com/*",
+		"tabs",
+    "storage"
+	]
+}
